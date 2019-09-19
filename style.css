@@ -1,0 +1,107 @@
+nav>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+nav>ul>li {
+    margin-right: 12px;
+    background: no-repeat;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+li:first-of-type {
+    margin-right: auto;
+    background-image: url(img/iconen/profiel.svg);
+    background-repeat: no-repeat;
+    margin-left: 12px;
+}
+
+li:nth-of-type(2) {
+    background-image: url(img/iconen/profiel.svg);
+    background-repeat: no-repeat;
+}
+
+li:nth-of-type(3) {
+    background-image: url(img/iconen/bibliotheek.svg);
+    background-repeat: no-repeat;
+}
+
+li:nth-of-type(4) {
+    background-image: url(img/iconen/meldingen.svg);
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: lightgrey;
+}
+
+section {
+    padding: 1em;
+}
+
+section>h2 {
+    padding-left: 2em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+article {
+    min-width: 300px;
+    max-width: 350px;
+    padding: 2em;
+}
+
+article>a>img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+
+article>header {
+    position: absolute;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 270px;
+    height: 270px;
+    opacity: 0;
+    /visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+article:hover>header {
+    opacity: 1;
+    /visibility: visible;
+}
+
+article:hover a>img {
+    opacity: 0.5;
+    transform: scale(1.03);
+}
+
+article>header>h2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+article>header>p {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+article>header>img {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 50px;
+    justify-self: end;
+}

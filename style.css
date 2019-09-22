@@ -2,7 +2,9 @@
     font-family: sans-serif;
 }
 
+
 /*navigatie*/
+
 nav>ul {
     list-style-type: none;
     display: flex;
@@ -14,16 +16,16 @@ nav>ul>li {
     margin-right: 30px;
     background: no-repeat;
     border: none;
-    /height: 50px;
-    /width: 50px;
+    margin-top: inherit;
 }
 
 li:first-of-type {
     margin-right: auto;
-    background-image: url(img/opdrachten/me.png);
-    background-repeat: no-repeat;
-    margin-left: 12px;
-    background-size: 40px;
+    margin-top: auto;
+}
+
+nav>ul>li>a>img {
+    width: 50px;
 }
 
 li:nth-of-type(2) {
@@ -54,7 +56,9 @@ nav>ul>li>a {
     color: black;
 }
 
-/**/
+
+/*werk*/
+
 section {
     padding: 1em;
 }
@@ -122,6 +126,28 @@ article>header>img {
     justify-self: end;
 }
 
+
+/*grid werk en flitersysteem*/
+
+#main {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+form {
+    grid-row: 1/2;
+}
+
+
+/*filtersysteem*/
+
+form>img {
+    width: 60px;
+}
+
+
+/*contact*/
+
 .inoutro {
     padding-left: 4em;
 }
@@ -132,4 +158,27 @@ article>header>img {
 
 #aboutme {
     padding-top: 2.5em;
+}
+
+.inoutro>p>a>img {
+    width: 60px;
+}
+
+
+/*filtersysteem bij laptopscherm*/
+
+@media (min-width:70em) {
+    #main {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto;
+    }
+    h2,
+    main {
+        grid-column: 2/6;
+    }
+    main {}
+    form {
+        grid-column: 1/2;
+    }
 }

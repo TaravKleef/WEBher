@@ -134,8 +134,12 @@ article>header>img {
     grid-template-rows: 1fr 2fr;
 }
 
-form {
+h2 {
     grid-row: 1/2;
+}
+
+form {
+    grid-row: 2/3;
 }
 
 
@@ -171,14 +175,19 @@ form>img {
     #main {
         display: grid;
         grid-template-columns: 1fr 3fr;
-        grid-template-rows: auto;
+        grid-template-rows: 1fr 20fr;
     }
-    h2,
+    h2 {
+        grid-row: 1/2;
+    }
     main {
         grid-column: 2/6;
+        grid-row: 2/20;
     }
-    main {}
     form {
         grid-column: 1/2;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-rows: auto;
     }
 }

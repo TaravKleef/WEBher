@@ -129,7 +129,7 @@ article>header>img {
 
 /*grid werk en flitersysteem*/
 
-#main {
+section:nth-of-type(2) {
     display: grid;
     grid-template-rows: 1fr 2fr;
 }
@@ -156,11 +156,11 @@ form>img {
     padding-left: 4em;
 }
 
-#contact {
+h2:nth-of-type(2) {
     padding: 0;
 }
 
-#aboutme {
+h1 {
     padding-top: 2.5em;
 }
 

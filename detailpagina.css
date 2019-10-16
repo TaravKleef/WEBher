@@ -1,0 +1,134 @@
+* {
+    font-family: sans-serif;
+}
+
+
+/*navigatie*/
+
+nav>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    height: 3em;
+}
+
+nav>ul>li {
+    margin-right: 30px;
+    background: no-repeat;
+    border: none;
+    margin-top: inherit;
+}
+
+li:first-of-type {
+    margin-right: auto;
+    margin-top: auto;
+}
+
+li:first-of-type:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+nav>ul>li>a>img {
+    width: 50px;
+}
+
+li:nth-of-type(2) {
+    /background-image: url(img/iconen/profiel.svg);
+    background-repeat: no-repeat;
+}
+
+li:nth-of-type(3) {
+    /background-image: url(img/iconen/bibliotheek.svg);
+    background-repeat: no-repeat;
+}
+
+li:nth-of-type(4) {
+    /background-image: url(img/iconen/meldingen.svg);
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: lightcyan;
+    position: fixed;
+    width: 100vw;
+    margin-top: -2.4vh;
+    margin-left: -1vw;
+    margin-right: -1vw;
+    z-index: 1;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+li>a:hover {
+    /text-decoration: underline;
+    color: mediumaquamarine;
+}
+
+li>a:focus {
+    text-decoration: underline;
+}
+
+
+/*midden content*/
+
+H2 {
+    padding-top: 4em;
+}
+
+main {
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+main>img {
+    width: 55vw;
+}
+
+
+/*contact*/
+
+footer {
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+.inoutro {
+    /padding-left: 4em;
+}
+
+h2:nth-of-type(2) {
+    padding: 0;
+}
+
+h1 {
+    padding-top: 2.5em;
+}
+
+.inoutro>p>a>img {
+    width: 60px;
+}
+
+footer>p>a>img {
+    padding: 0 1em 0 0;
+}
+
+footer>p>a>img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: 0.5s;
+    transform: rotateY(340deg) rotateX(10deg);
+}
+
+footer>p>a:nth-of-type(2)>img {
+    padding-left: 1.5em;
+}
+
+footer>p>a {
+    text-decoration: none;
+    color: black;
+}

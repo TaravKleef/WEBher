@@ -2,6 +2,12 @@
     font-family: sans-serif;
 }
 
+section,
+footer {
+    width: 90vw;
+    margin: auto;
+}
+
 
 /*navigatie*/
 
@@ -13,7 +19,7 @@ nav>ul {
 }
 
 nav>ul>li {
-    margin-right: 30px;
+    margin-right: 1.15em;
     background: no-repeat;
     border: none;
     margin-top: inherit;
@@ -30,21 +36,18 @@ li:first-of-type:hover {
 }
 
 nav>ul>li>a>img {
-    width: 50px;
+    width: 3.125em;
 }
 
 li:nth-of-type(2) {
-    /background-image: url(img/iconen/profiel.svg);
     background-repeat: no-repeat;
 }
 
 li:nth-of-type(3) {
-    /background-image: url(img/iconen/bibliotheek.svg);
     background-repeat: no-repeat;
 }
 
 li:nth-of-type(4) {
-    /background-image: url(img/iconen/meldingen.svg);
     background-repeat: no-repeat;
 }
 
@@ -65,7 +68,6 @@ nav>ul>li>a {
 }
 
 li>a:hover {
-    /text-decoration: underline;
     color: mediumaquamarine;
 }
 
@@ -74,12 +76,40 @@ li>a:focus {
 }
 
 
+/*over mij*/
+
+section>img {
+    border-radius: 1em;
+}
+
+section>img:nth-of-type(2) {
+    opacity: 0;
+    transform: rotateY(180deg);
+}
+
+section>img:nth-of-type(2):hover {
+    opacity: 0.2;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 2em;
+}
+
+H1:hover {
+    color: white;
+    text-shadow: 0 0 15px skyblue, 0 0 10px mediumpurple;
+}
+
+section:nth-last-of-type(2)>img {
+    width: 20em;
+}
+
+
 /*werk*/
 
 section {
     padding-top: 1em;
-    padding-left: 20vw;
-    padding-right: 20vw;
     box-sizing: border-box;
 }
 
@@ -88,14 +118,18 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     box-sizing: border-box;
+    background-color: lavender;
+    border-radius: 1em;
+    width: 90vw;
+    margin: auto;
 }
 
 
 /*zorg dat het 3 blokjes naast elkaar zijn en dat ze even breed zijn als derest van de pagina*/
 
 article {
-    min-width: 300px;
-    max-width: 350px;
+    min-width: 18.75em;
+    max-width: 21.875em;
     padding: 2em;
 }
 
@@ -104,8 +138,8 @@ article>a {
 }
 
 article>a>img {
-    width: 300px;
-    height: 300px;
+    width: 18.75em;
+    height: 18.75em;
     object-fit: cover;
     transition: all 0.5s;
 }
@@ -116,8 +150,8 @@ article>a>header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 270px;
-    height: 270px;
+    width: 17em;
+    height: 17em;
     opacity: 0;
     transition: opacity 0.5s;
     z-index: 1;
@@ -152,6 +186,12 @@ article>a>header>img {
     justify-self: end;
 }
 
+
+/*
+bron gebruikt voor schaduw
+https://www.cssmatic.com/box-shadow
+*/
+
 article>a>img {
     -webkit-box-shadow: 0 0 20px rgba(5, 44, 44, 0.7);
     -moz-box-shadow: 0 0 20px rgba(5, 44, 44, 0.7);
@@ -159,81 +199,81 @@ article>a>img {
 }
 
 
-/*grid werk en flitersysteem*/
-
-section:nth-of-type(2) {
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-}
-
-h2 {
-    grid-row: 1/2;
-}
-
-form {
-    grid-row: 2/3;
-}
-
-
 /*filtersysteem*/
 
-form>a>label>img {
-    width: 60px;
-}
-
-form>a>label>img:hover {
-    opacity: 0.8;
-    transform: scale(1.05);
-    transition: 0.6s;
-    transform: rotate(360deg);
-    transition-delay: 0.1s;
-}
-
-input[type=checkbox] {
-    display: none;
-}
-
-input[type=checkbox]:checked+label {
+input,
+label {
     display: inline-block;
-    border: red;
+    position: relative;
+    cursor: pointer;
+    margin: 0.5em;
 }
 
-#visualdark {
-    visibility: hidden;
+label:hover:nth-of-type(2n+1) {
+    transform: scale(1.5) skewX(30deg);
+    transition: 0.5s;
 }
 
-#visual {
-    position: absolute;
-    /visibility: hidden;
+label:hover:nth-of-type(2n+2) {
+    transform: scale(1.5) skewX(-30deg);
+    transition: 0.5s;
 }
 
+fieldset>button {
+    display: block;
+    margin-top: 1em;
+    font-size: 1em;
+    background-color: skyblue;
+    color: white;
+    padding: 0.5em;
+    width: 7em;
+    border-radius: 2em;
+    transform: rotate(-180deg);
+}
 
-/*hoe kan is ze selecteren en deselecteren
-https://jsfiddle.net/viralpatel/p499h/
-https://www.viralpatel.net/css-radio-button-checkbox-background/*/
+Fieldset>button:hover {
+    transform: scale(3.3) rotate(0deg);
+    transition: 1.5s;
+}
+
+legend:nth-of-type(1) {
+    margin-bottom: -1em;
+    font-size: 1.5em;
+    padding-top: 2em;
+}
+
+legend {
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+fieldset {
+    border: none;
+    background-color: lightgoldenrodyellow;
+    padding: 2em;
+    border-radius: 1em;
+    margin-top: -5em;
+}
 
 
 /*contact*/
 
 footer {
-    padding-left: 20vw;
-    padding-right: 20vw;
-}
-
-.inoutro {
-    /padding-left: 4em;
+    background-color: lightgoldenrodyellow;
+    border-radius: 1em;
+    padding: 1em;
+    margin-top: 2em;
+    box-sizing: border-box;
 }
 
 h2:nth-of-type(2) {
     padding: 0;
 }
 
-h1 {
-    padding-top: 2.5em;
-}
-
 .inoutro>p>a>img {
-    width: 60px;
+    width: 3.75em;
+    padding-top: 1em;
 }
 
 footer>p>a>img {
@@ -257,30 +297,50 @@ footer>p>a {
 }
 
 
-/*filtersysteem bij laptopscherm*/
+/*desktop grid*/
 
-@media (min-width:70em) {
-    #main {
+p {
+    max-width: 800px;
+}
+
+@media(min-width:70em) {
+    div {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 2fr;
-    }
-    h2 {
-        grid-row: 1/2;
-        grid-column: 1/2;
-    }
-    main {
-        grid-column: 1/4;
-        grid-row: 3/3;
+        grid-template-columns: 1fr 3.9fr;
+        grid-template-rows: 1fr 1fr;
     }
     form {
-        grid-column: 1/3;
-        grid-row: 2/3;
-        display: inline;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        margin: auto;
+        margin-top: 2.6em;
+    }
+    main {
+        grid-column: 2/5;
+        grid-row: 1/3;
+        width: auto;
+    }
+}
+
+@media(max-width:70em) {
+    form {
+        margin-top: 4em;
+    }
+    footer {
+        width: 90vw;
+    }
+}
+
+@media(max-width:50em) {
+    section>img:nth-of-type(2) {
+        display: none;
     }
 }
 
 
-/*spelen met titel pagina*/
+/*effect nav op pagina*/
 
-H1:hover {}
+.vergroot {
+    transform: scale(0.9) rotate(5deg);
+    transition: 2s;
+}
